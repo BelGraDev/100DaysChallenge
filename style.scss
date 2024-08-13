@@ -30,15 +30,22 @@
   transform: translate(-50%,-50%);
   color: white;
 }
+.numbers{
 
+  position:relative;
+  height: 100px;
+  width: 200px;
+}
 .one{
   position: relative;
-  height: 40px;
-  width: 20px;
-  background-image: linear-gradient(to bottom,rgb(219, 213, 213), white);
+  height: 45px;
+  width: 25px;
+  background-color: white;
   border-radius: 5px;
   transform: rotate(45deg);
   box-shadow:#333;
+  z-index:1;
+  box-shadow: 0px 0px 10px -2px #585555;
 
 
 }
@@ -46,14 +53,31 @@
   content: "";
   position:absolute;
   height: 100px;
-  width: 20px;
+  width: 25px;
   left:30px;
   top:30px;
   background-color: white;
   border-radius: 5px;
   transform:translateY(-50%) rotate(-45deg);
-  z-index:1;
-  box-shadow:#333;
+  box-shadow: 0px 0px 10px -2px #585555;
 }
 
+.zero,.zero2{
+  position:absolute;
+  height: 100px;
+  width: 100px;
+  top:0;
+  left:30px;
+  border-radius: 100px;
+  border: 25px solid #fff;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px -2px #585555;
+  z-index: 0;
 
+}
+
+.zero2{
+  z-index:-1;
+  left:115px;
+
+}
