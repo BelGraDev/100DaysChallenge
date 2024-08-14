@@ -42,6 +42,9 @@
 
 .menu::after{
   content:'';
+  animation:closeDown;
+  animation-duration:2s;
+  animation-iteration-count:infinite;
   position:absolute;
   margin-top:20px;
   
@@ -49,6 +52,48 @@
 
 .menu::before{
   content:'';
+  animation:closeUp;
+  animation-duration:2s;
+  animation-iteration-count:infinite;
   position:absolute;
   bottom:20px
+}
+@keyframes closeDown{
+
+  from{
+    
+    transform: translateY(0px);
+  }
+  to{
+
+    transform: translateY(-20px);
+  }
+  
+  }
+  
+  @keyframes closeUp{
+  from{
+
+    transform: translateY(0px);
+  }
+  to{
+
+    transform: translateY(20px);
+  }
+}
+  
+  @keyframes shrink{
+
+  from{
+
+    transform: scaleX(1);
+    transform:scaleY(1);
+  }
+  to{
+
+    transform: scaleX(0.5);
+    transform: sclaeY(0.5);
+  
+  }
+  
 }
