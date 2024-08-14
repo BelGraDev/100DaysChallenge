@@ -31,34 +31,44 @@
 }
 
 
-.menu, .menu::after, .menu::before{
-  position:relative;
+%menu{
+
   width:80px;
   height:10px;
   background-color: white;
   border-radius:4px;
   box-shadow: 0px 2px 4px 0px #696666;
-}
-
-.menu::after{
-  content:'';
-  animation:closeDown;
-  animation-duration:2s;
-  animation-iteration-count:infinite;
-  position:absolute;
-  margin-top:20px;
   
 }
 
-.menu::before{
-  content:'';
-  animation:closeUp;
-  animation-duration:2s;
-  animation-iteration-count:infinite;
-  position:absolute;
-  bottom:20px
+.menuUpper{
+  @extend %menu;
+  position:relative;
+  animation:closeDown;
+  animation-duration: 0.5s;
+  z-index:1;
 }
-@keyframes closeDown{
+.menuMiddle{
+  @extend %menu;
+  position:relative;
+  margin-top: 10px;
+  animation:shrink;
+  animation-duration: 0.5s;
+  z-index:0;
+  
+}
+
+.menuLower{
+  @extend %menu;
+  position:relative;
+  margin-top: 10px;
+  animation:closeUp;
+  animation-duration: 0.5s;
+  z-index:1;
+}
+
+
+@keyframes closeUp{
 
   from{
     
@@ -71,7 +81,7 @@
   
   }
   
-  @keyframes closeUp{
+  @keyframes closeDown{
   from{
 
     transform: translateY(0px);
