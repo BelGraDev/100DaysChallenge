@@ -1,0 +1,78 @@
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  background-color:#333;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.circle{
+  position:relative;
+  height:200px;
+  width:200px;
+  background-color:hsl(40,50,80);
+  border-radius:100px;
+  z-index:0;
+
+
+}
+.sun{
+  position:relative;
+  height:40px;
+  width:40px;
+  background-color: hsl(60, 90, 60);
+  border-radius:100px;
+  z-index:1;
+}
+
+.sky{
+  position: relative;
+  height:130px;
+  width:200px;
+  background-color: hsl(180,90,70);
+  top: -40px;
+  left: 0;
+  clip-path:circle(100px at 100px 100px);
+}
+
+.left-side-pyramid{
+
+  position:relative;
+  height:40px;
+  width: 80px;
+  bottom: 79px;
+  left: 10px;
+  background-color: hsl(40,70,80);
+  clip-path: polygon(50% 100%, 100% 0%, 100% 100%);
+  translate:rotate(180deg);
+}
+
+.right-side-pyramid{
+  position:relative;
+  height:80px;
+  width: 60px;
+  bottom:159px;
+  left: 89px;
+  background-color: hsl(40,60,75);
+  clip-path: polygon(0% 100%, 0% 50%, 50% 100%);
+  translate:rotate(180deg);
+}
