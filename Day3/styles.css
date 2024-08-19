@@ -90,7 +90,7 @@
           clip-path: polygon(50% 100%, 87% 0%, 100% 100%);
   translate: rotate(180deg);
   z-index: 3;
-  animation: left-shading 5000ms ease-out infinite;
+  animation: left-shading 10s ease-out infinite;
 }
 
 .right-side-pyramid {
@@ -103,7 +103,7 @@
   translate: rotate(180deg);
   transform: translateX(109%);
   z-index: 3;
-  animation: right-shading 5000ms ease-out infinite;
+  animation: right-shading 10s ease-out infinite;
 }
 
 @keyframes orbit-animation {
@@ -124,20 +124,14 @@
   0% {
     background-color: hsl(40, 62%, 70%);
   }
-  16% {
-    background-color: hsl(40, 53%, 69%);
-  }
-  33% {
-    background-color: hsl(40, 65%, 75%);
-  }
-  49% {
-    background-color: hsl(40, 65%, 75%);
+  50% {
+    background-color: hsl(40, 70%, 80%);
   }
   66% {
-    background-color: hsl(40, 48%, 80%);
+    background-color: hsl(39, 35%, 78%);
   }
   100% {
-    background-color: hsl(40, 48%, 80%);
+    background-color: hsl(40, 62%, 70%);
   }
 }
 @keyframes left-shading {
@@ -148,7 +142,7 @@
     background-color: hsl(40, 70%, 80%);
   }
   66% {
-    background-color: hsl(40, 60%, 75%);
+    background-color: hsl(40, 62%, 70%);
   }
   100% {
     background-color: hsl(39, 35%, 78%);

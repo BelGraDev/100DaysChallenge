@@ -1,5 +1,6 @@
 
 .frame {
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -17,26 +18,24 @@
 	-moz-osx-font-smoothing: grayscale;
   background-color:#333;
 }
-
 .center {
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
-
 .circle{
+
   position:relative;
   height:200px;
   width:200px;
   background-color:hsl(40,50,80);
   border-radius:200px;
   z-index:1;
-  
-
-
 }
 .circle::after{
+
   content:'';
   position:absolute;
   top:50%;
@@ -48,8 +47,8 @@
   border-radius:200px;
   z-index:5;
 }
-
 .orbit{
+
     width: 200px;
     height: 200px;
     border: 1px dashed #ccc; /* Just to visualize the orbit */
@@ -58,8 +57,8 @@
     animation: orbit-animation 10s ease-out infinite;
     z-index: 4;
 }
-  
 .sun{
+
   position:relative;
   height:40px;
   width:40px;
@@ -70,8 +69,8 @@
   right: 30px;
 
 }
-
 .sky{
+
   position: relative;
   height:150px;
   width:260px;
@@ -81,7 +80,6 @@
   clip-path:circle(100px at 100px 110px);
   z-index:1;
 }
-
 .left-side-pyramid{
 
   position:relative;
@@ -93,10 +91,10 @@
   clip-path: polygon(50% 100%, 87% 0%, 100% 100%);
   translate:rotate(180deg);
   z-index: 3;
-  animation: left-shading 5000ms ease-out infinite;
+  animation: left-shading 10s ease-out infinite;
 }
-
 .right-side-pyramid{
+
   position:relative;
   height:120px;
   width: 100px;
@@ -104,9 +102,8 @@
   clip-path: polygon(20% 100%, 0% 50%, 50% 100%);
   translate:rotate(180deg);
   transform: translateX(109%);
-
   z-index: 3;
-  animation: right-shading 5000ms ease-out infinite;
+  animation: right-shading 10s ease-out infinite;
 }
 @keyframes orbit-animation {
   0% {
@@ -122,55 +119,32 @@
     transform: rotate(360deg);
   }
 }
-
 @keyframes right-shading{
   0%{
     background-color: hsl(40, 62%, 70%);
-
   }
-  16%{
-    background-color: hsl(40, 53%, 69%);
-
-  }
-  33%{
-    background-color: hsl(40,65,75);
-
-
-  }
-  49%{
-    background-color: hsl(40, 65%, 75%); 
+  50%{
+    background-color: hsl(40,70,80);
   }
   66%{
-    background-color: hsl(40, 48%, 80%);
-
-
+    background-color: hsl(39, 35%, 78%);
   }
-  100%{
-
-    background-color: hsl(40, 48%, 80%);
-
-    
+  100%{ 
+    background-color: hsl(40, 62%, 70%);
   }
-
 }
 
 @keyframes left-shading{
   0%{
     background-color: hsl(39, 35%, 78%);
-
   }
   33%{
     background-color: hsl(40,70,80);
-
   }
   66%{
-    background-color: hsl(40,60,75);
-
+    background-color: hsl(40, 62%, 70%);
   }
   100%{
-
     background-color: hsl(39, 35%, 78%);
-
-    
   }
 }
