@@ -1,0 +1,121 @@
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    background-color: hsl(360 80 70);
+}
+
+.center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.lower-circle{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    background-color: white;
+    transform-origin:center;
+    z-index: 1;
+    box-shadow: 0 0 5px rgba(0 0 0 / 40%);
+    animation: lowercircle 6000ms ease-out infinite;
+    
+}
+.middle-circle{
+    position:absolute;
+    height: 100px;
+    width:100px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100px;
+    transform-origin:center;
+    box-shadow: 0 5px 10px rgba(0 0 0 / 40%);
+    z-index: 2;
+    background-color:white;
+    animation: middlecircle 4000ms ease-out infinite;
+    animation-delay: 1000ms;
+
+}
+
+.upper-circle{
+    position:absolute;
+    height: 50px;
+    width:50px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100px;
+    transform-origin:center;
+    box-shadow: 0 5px 10px rgba(0 0 0 / 40%);
+    background-color:white;
+    z-index: 3;
+    animation: uppercircle 2000ms ease-out infinite;
+    animation-delay: 2000ms;
+}
+
+
+@keyframes lowercircle{
+    0%{
+        transform:translate(-50%,-50%) scale(0);
+
+
+    }
+    50%{
+        transform:translate(-50%,-50%) scale(1);
+
+    }
+    100%{
+        transform:translate(-50%,-50%) scale(0);
+
+    }
+}
+
+@keyframes middlecircle{
+    0%{
+        transform:translate(-50%,-50%) scale(0);
+
+
+    }
+    50%{
+        transform:translate(-50%,-50%) scale(1);
+
+    }
+    100%{
+        transform:translate(-50%,-50%) scale(0);
+
+    }
+}
+
+@keyframes uppercircle{
+    0%{
+        transform:translate(-50%,-50%) scale(0);
+
+    }
+    50%{
+        transform:translate(-50%,-50%) scale(1);
+    }
+    100%{
+        transform:translate(-50%,-50%) scale(0);
+
+    }
+}
