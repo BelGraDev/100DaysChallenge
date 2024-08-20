@@ -36,7 +36,8 @@
   transform-origin: center;
   z-index: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-  animation: lowercircle 6000ms ease-out infinite;
+  animation: lowercircle 3000ms ease-out infinite alternate;
+  animation-fill-mode: both;
 }
 
 .middle-circle {
@@ -51,8 +52,8 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   z-index: 2;
   background-color: white;
-  animation: middlecircle 4000ms ease-out infinite;
-  animation-delay: 1000ms;
+  animation: middlecircle 3000ms ease-out infinite alternate;
+  animation-fill-mode: both;
 }
 
 .upper-circle {
@@ -67,15 +68,18 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   background-color: white;
   z-index: 3;
-  animation: uppercircle 2000ms ease-out infinite;
-  animation-delay: 2000ms;
+  animation: uppercircle 3000ms ease-out infinite alternate;
+  animation-fill-mode: both;
 }
 
 @keyframes lowercircle {
   0% {
     transform: translate(-50%, -50%) scale(0);
   }
-  50% {
+  25% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  70% {
     transform: translate(-50%, -50%) scale(1);
   }
   100% {
@@ -86,8 +90,14 @@
   0% {
     transform: translate(-50%, -50%) scale(0);
   }
+  25% {
+    transform: translate(-50%, -50%) scale(0);
+  }
   50% {
     transform: translate(-50%, -50%) scale(1);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(0);
   }
   100% {
     transform: translate(-50%, -50%) scale(0);
@@ -97,7 +107,10 @@
   0% {
     transform: translate(-50%, -50%) scale(0);
   }
-  50% {
+  25% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  70% {
     transform: translate(-50%, -50%) scale(1);
   }
   100% {
