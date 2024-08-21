@@ -36,7 +36,7 @@
   transform-origin: center;
   z-index: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-  animation: lowercircle 3000ms ease-out infinite alternate;
+  animation: lowercircle 4000ms ease infinite alternate;
   animation-fill-mode: both;
 }
 
@@ -52,7 +52,7 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   z-index: 2;
   background-color: white;
-  animation: middlecircle 3000ms ease-out infinite alternate;
+  animation: middlecircle 4000ms ease infinite alternate;
   animation-fill-mode: both;
 }
 
@@ -68,7 +68,7 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   background-color: white;
   z-index: 3;
-  animation: uppercircle 3000ms ease-out infinite alternate;
+  animation: uppercircle 4000ms ease infinite alternate;
   animation-fill-mode: both;
 }
 
@@ -79,7 +79,10 @@
   25% {
     transform: translate(-50%, -50%) scale(1);
   }
-  70% {
+  75% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  90% {
     transform: translate(-50%, -50%) scale(1);
   }
   100% {
@@ -93,10 +96,16 @@
   25% {
     transform: translate(-50%, -50%) scale(0);
   }
+  40% {
+    transform: translate(-50%, -50%) scale(1);
+  }
   50% {
     transform: translate(-50%, -50%) scale(1);
   }
-  70% {
+  75% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  85% {
     transform: translate(-50%, -50%) scale(0);
   }
   100% {
@@ -107,11 +116,14 @@
   0% {
     transform: translate(-50%, -50%) scale(0);
   }
-  25% {
+  40% {
     transform: translate(-50%, -50%) scale(0);
   }
-  70% {
+  60% {
     transform: translate(-50%, -50%) scale(1);
+  }
+  75% {
+    transform: translate(-50%, -50%) scale(0);
   }
   100% {
     transform: translate(-50%, -50%) scale(0);
